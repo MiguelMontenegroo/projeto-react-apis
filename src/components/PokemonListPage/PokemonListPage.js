@@ -4,7 +4,7 @@ import {Container,PokemonNumber,PokemonName,PokemonType,TypesContainer,Pokeball,
 import PokemonCard from "../PokemonCard/PokemonCard"
 import { api } from "../api"
 import  { globalContext } from "../contexts/GlobalContexts"
-import { Button, Flex} from "@chakra-ui/react"
+import { Button, Flex, Spacer} from "@chakra-ui/react"
 import pokebolagif from "../../Assets/pokebolagif.gif"
 
 function PokemonListPage() {
@@ -69,6 +69,7 @@ useEffect(() => {
     </Container>
     <Flex>
     <Button hidden={!anterior}  onClick={()=>setPage(page-1)}>Anterior</Button>
+    <Spacer/>''
         <Button disabled={!proximo} onClick={()=>setPage(page+1)}>Proximo</Button>
     </Flex>
     </>
